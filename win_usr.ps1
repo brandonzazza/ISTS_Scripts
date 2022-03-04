@@ -1,5 +1,4 @@
 #usage .\win_usr.ps1 <scoring user>
-
 param (
 	[Parameter()]
 	(String)$keep
@@ -7,7 +6,6 @@ param (
 
 #disable and remove from admin group all users except $keep
 #add to admin group and change password for $keep
-
 $users = (Get-WmiObject -Class Win32_UserAccount | Select-Object -ExpandProperty name)
 foreach ($u in $users) {
 	if ($u -eq $keep) {
