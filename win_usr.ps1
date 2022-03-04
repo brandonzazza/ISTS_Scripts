@@ -26,3 +26,6 @@ foreach ($u in $users) {
 #turn on all default firewalls
 netsh AdvFirewall set AllProfiles state on > $null 2>&1
 echo "firewalls enabled"
+
+#change scoring user password in scorestack
+#log out and then back in as scoring user
